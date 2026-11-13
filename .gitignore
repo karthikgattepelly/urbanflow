@@ -1,2 +1,24 @@
-# Created by pytest automatically.
-*
+# macOS
+.DS_Store
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Environment and secrets
+.env
+
+# Editor
+.vscode/
+.idea/
+
+# Node / frontend build
+node_modules/
+frontend/dist/
+
+# Windows
+desktop.ini
+Thumbs.db

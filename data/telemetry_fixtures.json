@@ -1,0 +1,159 @@
+{
+  "scenarios": {
+    "normal": {
+      "title": "Nominal Free-Flow Traffic",
+      "description": "City network operating within normal parameters. Moderate speeds and low occupancies across all corridors.",
+      "steps": [
+        {
+          "step_index": 0,
+          "timestamp": "08:00:00",
+          "notes": "Morning commute baseline",
+          "telemetry": {
+            "seg_01": { "speed": 48.0, "occupancy": 0.22 },
+            "seg_02": { "speed": 52.0, "occupancy": 0.25 },
+            "seg_03": { "speed": 50.0, "occupancy": 0.27 },
+            "seg_04": { "speed": 42.0, "occupancy": 0.23 },
+            "seg_05": { "speed": 58.0, "occupancy": 0.17 },
+            "seg_06": { "speed": 52.0, "occupancy": 0.20 },
+            "seg_07": { "speed": 46.0, "occupancy": 0.24 },
+            "seg_08": { "speed": 47.0, "occupancy": 0.18 },
+            "seg_09": { "speed": 44.0, "occupancy": 0.20 },
+            "seg_10": { "speed": 40.0, "occupancy": 0.28 },
+            "seg_11": { "speed": 48.0, "occupancy": 0.17 },
+            "seg_12": { "speed": 43.0, "occupancy": 0.19 },
+            "seg_13": { "speed": 48.0, "occupancy": 0.14 },
+            "seg_14": { "speed": 46.0, "occupancy": 0.21 },
+            "seg_15": { "speed": 50.0, "occupancy": 0.22 },
+            "seg_16": { "speed": 55.0, "occupancy": 0.15 },
+            "seg_17": { "speed": 48.0, "occupancy": 0.16 },
+            "seg_18": { "speed": 42.0, "occupancy": 0.26 }
+          }
+        }
+      ]
+    },
+    "forecast": {
+      "title": "Early Congestion Warning (15m Forecast)",
+      "description": "Occupancy increases rapidly on Central Corridor Arterial while speed begins to decay. Forecast Agent flags high risk 15 minutes before gridlock.",
+      "steps": [
+        {
+          "step_index": 0,
+          "timestamp": "08:15:00",
+          "notes": "Inflow surge begins at Central Hub",
+          "telemetry": {
+            "seg_01": { "speed": 46.0, "occupancy": 0.28 },
+            "seg_02": { "speed": 48.0, "occupancy": 0.35 },
+            "seg_03": { "speed": 45.0, "occupancy": 0.38 },
+            "seg_04": { "speed": 41.0, "occupancy": 0.25 },
+            "seg_07": { "speed": 44.0, "occupancy": 0.28 }
+          }
+        },
+        {
+          "step_index": 1,
+          "timestamp": "08:17:00",
+          "notes": "Rapid occupancy velocity detected (dOcc/dt > +0.15/min)",
+          "telemetry": {
+            "seg_01": { "speed": 44.0, "occupancy": 0.32 },
+            "seg_02": { "speed": 42.0, "occupancy": 0.49 },
+            "seg_03": { "speed": 38.0, "occupancy": 0.58 },
+            "seg_04": { "speed": 40.0, "occupancy": 0.27 },
+            "seg_07": { "speed": 43.0, "occupancy": 0.30 }
+          }
+        },
+        {
+          "step_index": 2,
+          "timestamp": "08:20:00",
+          "notes": "High 15-minute risk triggered prior to physical gridlock",
+          "telemetry": {
+            "seg_01": { "speed": 42.0, "occupancy": 0.36 },
+            "seg_02": { "speed": 34.0, "occupancy": 0.68 },
+            "seg_03": { "speed": 28.0, "occupancy": 0.77 },
+            "seg_04": { "speed": 39.0, "occupancy": 0.29 },
+            "seg_07": { "speed": 41.0, "occupancy": 0.33 }
+          }
+        }
+      ]
+    },
+    "blockage": {
+      "title": "Incident & Physical Road Blockage",
+      "description": "Multi-vehicle collision on Central Corridor Arterial (seg_03). Sudden speed collapse detected by sensor and corroborated by roadside CCTV camera.",
+      "steps": [
+        {
+          "step_index": 0,
+          "timestamp": "08:30:00",
+          "notes": "Sudden speed collapse to 5 km/h with 4-sigma variance surge",
+          "telemetry": {
+            "seg_03": {
+              "speed": 6.5,
+              "occupancy": 0.94,
+              "sensor_anomaly": true,
+              "cv_frame_available": true,
+              "camera_id": "CAM_CENTRAL_03",
+              "cv_evidence": {
+                "camera_id": "CAM_CENTRAL_03",
+                "frame_id": "frm_083012_hd",
+                "detected_class": "collision",
+                "confidence": 0.94,
+                "bounding_box": [120, 180, 480, 560],
+                "timestamp": "08:30:12"
+              }
+            },
+            "seg_02": { "speed": 22.0, "occupancy": 0.72 },
+            "seg_07": { "speed": 45.0, "occupancy": 0.22 }
+          }
+        },
+        {
+          "step_index": 1,
+          "timestamp": "08:32:00",
+          "notes": "Corridor marked BLOCKED; dynamic rerouting shifts eastbound volume",
+          "telemetry": {
+            "seg_03": {
+              "speed": 3.0,
+              "occupancy": 0.98,
+              "sensor_anomaly": true,
+              "cv_frame_available": true,
+              "camera_id": "CAM_CENTRAL_03",
+              "cv_evidence": {
+                "camera_id": "CAM_CENTRAL_03",
+                "frame_id": "frm_083204_hd",
+                "detected_class": "collision",
+                "confidence": 0.96,
+                "bounding_box": [115, 175, 490, 565],
+                "timestamp": "08:32:04"
+              }
+            },
+            "seg_02": { "speed": 16.0, "occupancy": 0.85 },
+            "seg_15": { "speed": 46.0, "occupancy": 0.35 }
+          }
+        }
+      ]
+    },
+    "emergency": {
+      "title": "Emergency Priority Corridor Dispatch",
+      "description": "Ambulance AMB-104 dispatched from West Gate to Metro General Hospital with critical priority while Central Corridor is impaired.",
+      "steps": [
+        {
+          "step_index": 0,
+          "timestamp": "08:40:00",
+          "notes": "Ambulance AMB-104 requests high-priority hospital corridor",
+          "emergency_request": {
+            "id": "emg_104",
+            "vehicle_id": "AMB-104",
+            "vehicle_type": "ambulance",
+            "origin_node": "N_WEST_GATE",
+            "destination_node": "N_HOSPITAL_PLAZA",
+            "eta_target_seconds": 360.0,
+            "priority": "critical"
+          },
+          "telemetry": {
+            "seg_03": { "speed": 5.0, "occupancy": 0.96, "sensor_anomaly": true },
+            "seg_01": { "speed": 46.0, "occupancy": 0.24 },
+            "seg_04": { "speed": 42.0, "occupancy": 0.22 },
+            "seg_15": { "speed": 50.0, "occupancy": 0.25 },
+            "seg_07": { "speed": 46.0, "occupancy": 0.26 }
+          }
+        }
+      ]
+    }
+  }
+}
+
