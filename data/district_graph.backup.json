@@ -1,0 +1,296 @@
+{
+  "district_name": "Metro Core Operations District",
+  "bounding_box": {
+    "min_lat": 37.776,
+    "max_lat": 37.795,
+    "min_lng": -122.422,
+    "max_lng": -122.395
+  },
+  "nodes": [
+    {
+      "id": "N_WEST_GATE",
+      "name": "West Gate Junction",
+      "lat": 37.7812,
+      "lng": -122.4210,
+      "type": "intersection"
+    },
+    {
+      "id": "N_CIVIC_PLAZA",
+      "name": "Civic Center Plaza",
+      "lat": 37.7850,
+      "lng": -122.4180,
+      "type": "intersection"
+    },
+    {
+      "id": "N_BROADWAY_1ST",
+      "name": "Broadway & 1st St",
+      "lat": 37.7890,
+      "lng": -122.4150,
+      "type": "intersection"
+    },
+    {
+      "id": "N_NORTH_EXPRESS",
+      "name": "North Expressway Terminal",
+      "lat": 37.7940,
+      "lng": -122.4100,
+      "type": "terminal"
+    },
+    {
+      "id": "N_CENTRAL_HUB",
+      "name": "Central Metro Hub",
+      "lat": 37.7852,
+      "lng": -122.4105,
+      "type": "intersection"
+    },
+    {
+      "id": "N_MARKET_CROSS",
+      "name": "Market & 3rd Crossing",
+      "lat": 37.7820,
+      "lng": -122.4110,
+      "type": "intersection"
+    },
+    {
+      "id": "N_COMMERCE_WAY",
+      "name": "Financial / Commerce Way",
+      "lat": 37.7895,
+      "lng": -122.4040,
+      "type": "intersection"
+    },
+    {
+      "id": "N_HOSPITAL_PLAZA",
+      "name": "Metro General Hospital",
+      "lat": 37.7860,
+      "lng": -122.3990,
+      "type": "hospital"
+    },
+    {
+      "id": "N_RIVERSIDE_SOUTH",
+      "name": "Riverside South Bypass",
+      "lat": 37.7780,
+      "lng": -122.4130,
+      "type": "intersection"
+    },
+    {
+      "id": "N_WATERFRONT_EAST",
+      "name": "Waterfront East Terminal",
+      "lat": 37.7800,
+      "lng": -122.4010,
+      "type": "terminal"
+    },
+    {
+      "id": "N_GRAND_AVE_WEST",
+      "name": "Grand Avenue West",
+      "lat": 37.7885,
+      "lng": -122.4205,
+      "type": "intersection"
+    },
+    {
+      "id": "N_GRAND_AVE_EAST",
+      "name": "Grand Avenue East",
+      "lat": 37.7925,
+      "lng": -122.4025,
+      "type": "intersection"
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_01",
+      "name": "West Gate Blvd (WB to Civic)",
+      "start_node": "N_WEST_GATE",
+      "end_node": "N_CIVIC_PLAZA",
+      "length_km": 0.55,
+      "speed_limit_kmh": 50.0,
+      "baseline_speed": 48.0,
+      "baseline_occupancy": 0.22,
+      "coordinates": [[37.7812, -122.4210], [37.7830, -122.4195], [37.7850, -122.4180]]
+    },
+    {
+      "id": "seg_02",
+      "name": "Civic to Central Pkwy East",
+      "start_node": "N_CIVIC_PLAZA",
+      "end_node": "N_CENTRAL_HUB",
+      "length_km": 0.70,
+      "speed_limit_kmh": 55.0,
+      "baseline_speed": 52.0,
+      "baseline_occupancy": 0.26,
+      "coordinates": [[37.7850, -122.4180], [37.7851, -122.4140], [37.7852, -122.4105]]
+    },
+    {
+      "id": "seg_03",
+      "name": "Central Corridor Arterial (Critical Link)",
+      "start_node": "N_CENTRAL_HUB",
+      "end_node": "N_HOSPITAL_PLAZA",
+      "length_km": 0.95,
+      "speed_limit_kmh": 55.0,
+      "baseline_speed": 50.0,
+      "baseline_occupancy": 0.28,
+      "coordinates": [[37.7852, -122.4105], [37.7856, -122.4050], [37.7860, -122.3990]]
+    },
+    {
+      "id": "seg_04",
+      "name": "Broadway Avenue North",
+      "start_node": "N_CIVIC_PLAZA",
+      "end_node": "N_BROADWAY_1ST",
+      "length_km": 0.50,
+      "speed_limit_kmh": 45.0,
+      "baseline_speed": 42.0,
+      "baseline_occupancy": 0.24,
+      "coordinates": [[37.7850, -122.4180], [37.7870, -122.4165], [37.7890, -122.4150]]
+    },
+    {
+      "id": "seg_05",
+      "name": "Broadway Express Connector",
+      "start_node": "N_BROADWAY_1ST",
+      "end_node": "N_NORTH_EXPRESS",
+      "length_km": 0.65,
+      "speed_limit_kmh": 60.0,
+      "baseline_speed": 58.0,
+      "baseline_occupancy": 0.18,
+      "coordinates": [[37.7890, -122.4150], [37.7915, -122.4125], [37.7940, -122.4100]]
+    },
+    {
+      "id": "seg_06",
+      "name": "North Belt to Commerce Way",
+      "start_node": "N_NORTH_EXPRESS",
+      "end_node": "N_COMMERCE_WAY",
+      "length_km": 0.75,
+      "speed_limit_kmh": 55.0,
+      "baseline_speed": 52.0,
+      "baseline_occupancy": 0.20,
+      "coordinates": [[37.7940, -122.4100], [37.7920, -122.4070], [37.7895, -122.4040]]
+    },
+    {
+      "id": "seg_07",
+      "name": "Commerce Way to Hospital North",
+      "start_node": "N_COMMERCE_WAY",
+      "end_node": "N_HOSPITAL_PLAZA",
+      "length_km": 0.60,
+      "speed_limit_kmh": 50.0,
+      "baseline_speed": 46.0,
+      "baseline_occupancy": 0.25,
+      "coordinates": [[37.7895, -122.4040], [37.7875, -122.4015], [37.7860, -122.3990]]
+    },
+    {
+      "id": "seg_08",
+      "name": "Civic to Riverside South Link",
+      "start_node": "N_CIVIC_PLAZA",
+      "end_node": "N_RIVERSIDE_SOUTH",
+      "length_km": 0.85,
+      "speed_limit_kmh": 50.0,
+      "baseline_speed": 47.0,
+      "baseline_occupancy": 0.19,
+      "coordinates": [[37.7850, -122.4180], [37.7815, -122.4155], [37.7780, -122.4130]]
+    },
+    {
+      "id": "seg_09",
+      "name": "Riverside South to Market Cross",
+      "start_node": "N_RIVERSIDE_SOUTH",
+      "end_node": "N_MARKET_CROSS",
+      "length_km": 0.50,
+      "speed_limit_kmh": 45.0,
+      "baseline_speed": 44.0,
+      "baseline_occupancy": 0.21,
+      "coordinates": [[37.7780, -122.4130], [37.7800, -122.4120], [37.7820, -122.4110]]
+    },
+    {
+      "id": "seg_10",
+      "name": "Market Cross to Central Hub",
+      "start_node": "N_MARKET_CROSS",
+      "end_node": "N_CENTRAL_HUB",
+      "length_km": 0.40,
+      "speed_limit_kmh": 45.0,
+      "baseline_speed": 40.0,
+      "baseline_occupancy": 0.29,
+      "coordinates": [[37.7820, -122.4110], [37.7836, -122.4108], [37.7852, -122.4105]]
+    },
+    {
+      "id": "seg_11",
+      "name": "Market South to Waterfront East",
+      "start_node": "N_MARKET_CROSS",
+      "end_node": "N_WATERFRONT_EAST",
+      "length_km": 0.90,
+      "speed_limit_kmh": 50.0,
+      "baseline_speed": 48.0,
+      "baseline_occupancy": 0.18,
+      "coordinates": [[37.7820, -122.4110], [37.7810, -122.4060], [37.7800, -122.4010]]
+    },
+    {
+      "id": "seg_12",
+      "name": "Waterfront East to Hospital Access",
+      "start_node": "N_WATERFRONT_EAST",
+      "end_node": "N_HOSPITAL_PLAZA",
+      "length_km": 0.70,
+      "speed_limit_kmh": 45.0,
+      "baseline_speed": 43.0,
+      "baseline_occupancy": 0.20,
+      "coordinates": [[37.7800, -122.4010], [37.7830, -122.4000], [37.7860, -122.3990]]
+    },
+    {
+      "id": "seg_13",
+      "name": "West Gate to Grand Ave West",
+      "start_node": "N_WEST_GATE",
+      "end_node": "N_GRAND_AVE_WEST",
+      "length_km": 0.80,
+      "speed_limit_kmh": 50.0,
+      "baseline_speed": 48.0,
+      "baseline_occupancy": 0.15,
+      "coordinates": [[37.7812, -122.4210], [37.7850, -122.4208], [37.7885, -122.4205]]
+    },
+    {
+      "id": "seg_14",
+      "name": "Grand Ave West to Broadway 1st",
+      "start_node": "N_GRAND_AVE_WEST",
+      "end_node": "N_BROADWAY_1ST",
+      "length_km": 0.50,
+      "speed_limit_kmh": 50.0,
+      "baseline_speed": 46.0,
+      "baseline_occupancy": 0.22,
+      "coordinates": [[37.7885, -122.4205], [37.7888, -122.4175], [37.7890, -122.4150]]
+    },
+    {
+      "id": "seg_15",
+      "name": "Broadway 1st to Commerce Way (Cross Bypass)",
+      "start_node": "N_BROADWAY_1ST",
+      "end_node": "N_COMMERCE_WAY",
+      "length_km": 0.95,
+      "speed_limit_kmh": 55.0,
+      "baseline_speed": 50.0,
+      "baseline_occupancy": 0.23,
+      "coordinates": [[37.7890, -122.4150], [37.7892, -122.4095], [37.7895, -122.4040]]
+    },
+    {
+      "id": "seg_16",
+      "name": "Grand Ave Outer Ring Bypass",
+      "start_node": "N_NORTH_EXPRESS",
+      "end_node": "N_GRAND_AVE_EAST",
+      "length_km": 0.70,
+      "speed_limit_kmh": 60.0,
+      "baseline_speed": 55.0,
+      "baseline_occupancy": 0.16,
+      "coordinates": [[37.7940, -122.4100], [37.7932, -122.4060], [37.7925, -122.4025]]
+    },
+    {
+      "id": "seg_17",
+      "name": "Grand Ave East to Hospital Perimeter",
+      "start_node": "N_GRAND_AVE_EAST",
+      "end_node": "N_HOSPITAL_PLAZA",
+      "length_km": 0.80,
+      "speed_limit_kmh": 50.0,
+      "baseline_speed": 48.0,
+      "baseline_occupancy": 0.17,
+      "coordinates": [[37.7925, -122.4025], [37.7890, -122.4005], [37.7860, -122.3990]]
+    },
+    {
+      "id": "seg_18",
+      "name": "Central Hub to Commerce Way Link",
+      "start_node": "N_CENTRAL_HUB",
+      "end_node": "N_COMMERCE_WAY",
+      "length_km": 0.65,
+      "speed_limit_kmh": 45.0,
+      "baseline_speed": 42.0,
+      "baseline_occupancy": 0.27,
+      "coordinates": [[37.7852, -122.4105], [37.7872, -122.4070], [37.7895, -122.4040]]
+    }
+  ]
+}
+
