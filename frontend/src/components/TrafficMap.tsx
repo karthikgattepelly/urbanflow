@@ -36,10 +36,10 @@ export const TrafficMap: React.FC<TrafficMapProps> = ({
     });
 
     // Dark sleek tile layer
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-      maxZoom: 19,
-      subdomains: 'abcd',
-    }).addTo(map);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors',
+  maxZoom: 19,
+}).addTo(map);
 
     L.control.zoom({ position: 'bottomright' }).addTo(map);
 
