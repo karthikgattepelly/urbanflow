@@ -1,2 +1,2 @@
-hi my name is Danger 1234 ,
-i have hizacked your community
+hi my name is Danger ,
+i have hijacked  your community
