@@ -6,7 +6,7 @@
 
 ## 1. System Architecture
 
-UrbanFlow AI enforces an **event-driven shared canonical world model** where agents never store private truths:
+UrbanFlow AI enforces an **event-driven shared canonical world model** where agents never store private truths!:
 
 ```
 [Road Sensors + CCTV Cameras]
